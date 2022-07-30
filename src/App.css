@@ -7,6 +7,14 @@
   color: rgb(61, 61, 61);
 }
 
+.alert{
+  font-size: 0.4rem;
+  margin-top: 5px;
+  max-height: 90px;
+  opacity: 0.95;
+  background-color: rgb(240, 240, 240);
+}
+
 
  /* Todos App atyles */
  .TodoApp{
@@ -291,10 +299,3 @@
   color-interpolation-filters: blac;
 }
 
-.alert{
-  font-size: 0.4rem;
-  margin-top: 5px;
-  max-height: 90px;
-  opacity: 0.95;
-  background-color: rgb(240, 240, 240);
-}

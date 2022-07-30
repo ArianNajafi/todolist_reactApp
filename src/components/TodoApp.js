@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import UpdateForm from "./UpdateForm";
 import Swal from 'sweetalert2';
 import { ColorMood, ColorMoodSpatcher } from "../App";
+import '../App.css';
 
 const TodoApp = () => {
     const [todos, setTodos] = useState("");
