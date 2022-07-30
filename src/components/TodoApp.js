@@ -16,16 +16,24 @@ const TodoApp = () => {
     // Handlers
     const setTodoHandler = (inputValue) => {
         setTodos([...todos, { id: Math.floor(Math.random() * 1000), text: inputValue, isCompleted: false }]);
+        // Swal.fire({
+        //     position: 'top',
+        //     title: 'New task aded',
+        //     showConfirmButton: false,
+        //     backdrop: false,
+        //     width: '190px',
+        //     icon: 'success',
+        //     timer: 1500,
+        //     // customClass: "alert",
+        // })
         Swal.fire({
-            position: 'top',
-            title: 'New task aded',
-            showConfirmButton: false,
-            backdrop: false,
-            width: '190px',
+            position: 'top-end',
             icon: 'success',
-            timer: 1500,
-            customClass: "alert",
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
         })
+
     }
 
     const editTodoHandler = (todo) => {
