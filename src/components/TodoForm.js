@@ -17,16 +17,17 @@ const TodoForm = (props) => {
     const addBtnHandler = (e) => {
         e.preventDefault();
         if (!inputValue) {
-            Swal.fire({
-                position: 'top',
-                title: 'Task cant be empity',
-                showConfirmButton: false,
-                icon: 'warning',
-                backdrop: false,
-                width: '190px',
-                timer: 1500,
-                customClass: "alert",
-            })
+            alert("input cant be empity!")
+            // Swal.fire({
+            //     position: 'top',
+            //     title: 'Task cant be empity',
+            //     showConfirmButton: false,
+            //     icon: 'warning',
+            //     backdrop: false,
+            //     width: '190px',
+            //     timer: 1500,
+            //     customClass: "alert",
+            // })
             return;
         }
         props.setTodo(inputValue);
