@@ -27,11 +27,12 @@ const TodoApp = () => {
         //     // customClass: "alert",
         // })
         Swal.fire({
-            position: 'top-end',
+            position: 'top',
             icon: 'success',
             title: 'Your work has been saved',
             showConfirmButton: false,
-            timer: 1500
+            timer: 1500,
+            customClass: "alert",
         })
 
     }
@@ -58,13 +59,20 @@ const TodoApp = () => {
         const new_todos = todos.filter((todo) => todo.id !== id)
         setTodos(new_todos);
 
+        // Swal.fire({
+        //     position: 'top',
+        //     title: 'Task deleted',
+        //     showConfirmButton: false,
+        //     icon: 'success',
+        //     backdrop: false,
+        //     width: '190px',
+        //     timer: 1500,
+        //     customClass: "alert",
+        // })
         Swal.fire({
             position: 'top',
-            title: 'Task deleted',
+            title: 'Your work has been saved',
             showConfirmButton: false,
-            icon: 'success',
-            backdrop: false,
-            width: '190px',
             timer: 1500,
             customClass: "alert",
         })
