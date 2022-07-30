@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoApp from './components/TodoApp';
+import './App.css'
+import './AppDarkMood.css'
+import { createContext, useContext, useState } from 'react';
 
-function App() {
+export const ColorMood = createContext();
+export const ColorMoodSpatcher = createContext()
+
+
+const App = () => {
+  const [mood, setMood] = useState("light");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ColorMood.Provider value={mood}>
+      <ColorMoodSpatcher.Provider value={setMood}>
+        <div className={mood === 'light' ? "App" : "App_D"}>
+          <TodoApp />
+        </div>
+      </ColorMoodSpatcher.Provider>
+    </ColorMood.Provider>
+
   );
 }
 
