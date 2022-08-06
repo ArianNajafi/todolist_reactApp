@@ -34,32 +34,32 @@ const TodoApp = () => {
 
     const updateTodos = (todo) => {
         setEdit({ id: null, text: '', isCompleted: false });
-        // Swal.fire({
-        //     position: 'top',
-        //     title: 'Task updated',
-        //     showConfirmButton: false,
-        //     icon: 'success',
-        //     backdrop: false,
-        //     width: '190px',
-        //     timer: 1500,
-        //     customClass: "alert",
-        // })
+        Swal.fire({
+            position: 'top',
+            title: 'Task updated',
+            showConfirmButton: false,
+            icon: 'success',
+            backdrop: false,
+            width: '190px',
+            timer: 1500,
+            customClass: "alert",
+        })
     }
 
     const deleteTodoHandler = (id) => {
         const new_todos = todos.filter((todo) => todo.id !== id)
         setTodos(new_todos);
 
-        // Swal.fire({
-        //     position: 'top',
-        //     title: 'Task deleted',
-        //     showConfirmButton: false,
-        //     icon: 'success',
-        //     backdrop: false,
-        //     width: '190px',
-        //     timer: 1500,
-        //     customClass: "alert",
-        // })
+        Swal.fire({
+            position: 'top',
+            title: 'Task deleted',
+            showConfirmButton: false,
+            icon: 'success',
+            backdrop: false,
+            width: '190px',
+            timer: 1500,
+            customClass: "alert",
+        })
     }
 
     const compelteTodoHandler = (id) => {
@@ -70,18 +70,18 @@ const TodoApp = () => {
         updatedTodos[index] = Selectedtodo;
         setTodos(updatedTodos);
 
-        // if (Selectedtodo.isCompleted) {
-        //     Swal.fire({
-        //         position: 'top',
-        //         title: 'Task completed 🎉',
-        //         showConfirmButton: false,
-        //         icon: 'success',
-        //         backdrop: false,
-        //         width: '190px',
-        //         timer: 1500,
-        //         customClass: "alert",
-        //     })
-        // }
+        if (Selectedtodo.isCompleted) {
+            Swal.fire({
+                position: 'top',
+                title: 'Task completed 🎉',
+                showConfirmButton: false,
+                icon: 'success',
+                backdrop: false,
+                width: '190px',
+                timer: 1500,
+                customClass: "alert",
+            })
+        }
 
     }
 
