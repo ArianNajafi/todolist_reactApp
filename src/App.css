@@ -12,7 +12,6 @@
   margin-top: 5px;
   max-height: 90px;
   opacity: 0.95;
-  background-color: rgb(240, 240, 240);
 }
 
 
@@ -190,9 +189,6 @@
   color:rgb(163 230 53);
   font-size: 1.7rem;
   transition: all 0.1s ease-in-out;
-}
-.after_completed_btn{
-  color:  rgb(217 249 157) ;
 }
 .todoText_afterCompleted{
   text-decoration: line-through;

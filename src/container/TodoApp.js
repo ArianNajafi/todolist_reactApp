@@ -1,8 +1,8 @@
-import TodoForm from "./TodoForm";
-import TodoList from "./TodoList";
-import NavBar from "./NavBar";
+import TodoForm from "../components/TodoForm";
+import TodoList from "../components/TodoList";
+import NavBar from "../components/NavBar";
 import { useContext, useState } from "react";
-import UpdateForm from "./UpdateForm";
+import UpdateForm from "../components/UpdateForm";
 import Swal from 'sweetalert2';
 import { ColorMood, ColorMoodSpatcher } from "../App";
 import '../App.css';
@@ -16,16 +16,16 @@ const TodoApp = () => {
     // Handlers
     const setTodoHandler = (inputValue) => {
         setTodos([...todos, { id: Math.floor(Math.random() * 1000), text: inputValue, isCompleted: false }]);
-        // Swal.fire({
-        //     position: 'top',
-        //     title: 'New task aded',
-        //     showConfirmButton: false,
-        //     backdrop: false,
-        //     width: '190px',
-        //     icon: 'success',
-        //     timer: 1500,
-        //     // customClass: "alert",
-        // })
+        Swal.fire({
+            position: 'top',
+            title: 'New task aded',
+            showConfirmButton: false,
+            backdrop: false,
+            width: '190px',
+            icon: 'success',
+            timer: 1500,
+            customClass: "alert",
+        })
     }
 
     const editTodoHandler = (todo) => {
