@@ -12,7 +12,7 @@ const Todo = ({ todo, editHandler, deleteHandler, completeHandler }) => {
             <span className={todo.isCompleted ? "completedBtn after_completed_btn" : "completedBtn"} onClick={() => completeHandler(todo.id)}> <CgRadioChecked /> </span>
 
             <div className={todo.isCompleted ? "todo_text todoText_afterCompleted" : "todo_text"}>
-                {todo.text}
+                <p className={((mood === 'dark') && (todo.isCompleted)) ? 'todoText_afterCompleted_D' : ""}>{todo.text}</p>
             </div>
 
             <div className="btns">

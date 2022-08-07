@@ -140,14 +140,12 @@
     cursor: pointer;
   }
   .completedBtn:hover{
-    color:rgb(163 230 53);
     font-size: 1.7rem;
     transition: all 0.1s ease-in-out;
   }
-
-  .todoText_afterCompleted{
+  .todoText_afterCompleted_D{
     text-decoration: line-through;
-    color: rgb(133, 133, 133);
+    color: rgb(148, 148, 148);
   }
 
   .deleteBtn_D{
