@@ -1,7 +1,7 @@
 import TodoApp from './container/TodoApp';
 import './App.css'
 import './AppDarkMood.css'
-import { createContext, useContext, useState } from 'react';
+import { createContext, useState } from 'react';
 
 export const ColorMood = createContext();
 export const ColorMoodSpatcher = createContext()

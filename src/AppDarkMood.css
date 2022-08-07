@@ -144,9 +144,7 @@
     font-size: 1.7rem;
     transition: all 0.1s ease-in-out;
   }
-  .after_completed_btn{
-    color:  rgb(205, 255, 113) ;
-  }
+
   .todoText_afterCompleted{
     text-decoration: line-through;
     color: rgb(133, 133, 133);

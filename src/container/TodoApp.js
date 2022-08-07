@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import { useContext, useState } from "react";
 import UpdateForm from "../components/UpdateForm";
 import Swal from 'sweetalert2';
-import { ColorMood, ColorMoodSpatcher } from "../App";
+import { ColorMood } from "../App";
 import '../App.css';
 
 const TodoApp = () => {

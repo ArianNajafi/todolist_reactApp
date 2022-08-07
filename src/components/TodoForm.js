@@ -17,7 +17,6 @@ const TodoForm = (props) => {
     const addBtnHandler = (e) => {
         e.preventDefault();
         if (!inputValue) {
-            alert("input cant be empity!")
             Swal.fire({
                 position: 'top',
                 title: 'Task cant be empity',
@@ -32,6 +31,7 @@ const TodoForm = (props) => {
         }
         props.setTodo(inputValue);
         setInputValue('');
+        inputRef.current.focus();
     }
 
 
